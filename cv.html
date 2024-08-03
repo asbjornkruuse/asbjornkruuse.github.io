@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        .sidebar {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            padding-top: 20px;
-        }
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-        .content {
-            margin-left: 220px;
-            padding: 20px;
-        }
-    </style>
-</head>
-<body>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #111;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-size: 18px;
+            }
+            .navbar a:hover {
+                background-color: #575757;
+            }
+            .content {
+                padding: 80px 20px; /* Add top padding to avoid content being hidden under the navbar */
+            }
+        </style>
+    </head>
+    <body>
 
-<div class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
+<div class="navbar">
+    <a href="index.html">Start</a>
+    <a href="about.html">Om mig</a>
     <a href="cv.html">CV</a>
     <a href="projekter.html">Projekter</a>
     <a href="certifikater.html">Certifikater</a>
