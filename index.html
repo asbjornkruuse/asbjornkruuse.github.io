@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<p>Dette er en pladsholder for min kommende hjemmeside</p>
-<p>Dette er endnu en test af commit</p>
+
+<div class="sidebar">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#cv">CV</a>
+</div>
+
+<div class="content">
+    <h1 id="home">Hello World</h1>
+    <p>I'm hosted with GitHub Pages.</p>
+    <p>Dette er en pladsholder for min kommende hjemmeside</p>
+    <p>Dette er endnu en test af commit</p>
+
+    <h2 id="about">About Me</h2>
+    <p>This is the About Me section.</p>
+
+    <h2 id="cv">CV</h2>
+    <p>This is the CV section.</p>
+</div>
+
 </body>
 </html>
