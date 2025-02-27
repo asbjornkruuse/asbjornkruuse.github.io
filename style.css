@@ -131,3 +131,6 @@ button:hover, .btn:hover {
     padding: 20px;
     font-size: 14px;
 }
+html {
+    overflow-y: scroll; /* Forces vertical scrollbar */
+}
