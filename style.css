@@ -12,6 +12,7 @@ body {
 }
 
 /* NAVBAR */
+/* NAVBAR FIX */
 .navbar {
     overflow: hidden;
     background-color: #003B46; /* Dark teal */
@@ -20,27 +21,59 @@ body {
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: space-between; /* Align links left & social media right */
-    padding: 10px 40px;
+    justify-content: space-between; /* Align menu left, social media right */
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* NAVBAR MENU */
+.navbar .menu {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+    flex-wrap: wrap; /* Prevents text from getting cut */
 }
 
 .navbar a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Slightly smaller text to fit better */
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 15px;
     transition: color 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents menu items from breaking into multiple lines */
 }
 
-.navbar a:hover {
-    color: #C4DFE6; /* Soft blue hover effect */
-}
-
+/* NAVBAR SOCIAL LINKS */
 .navbar .social-media {
     display: flex;
-    gap: 15px; /* Space between social media links */
+    gap: 10px; /* Adjust spacing */
+    white-space: nowrap;
+}
+
+/* HOVER EFFECTS */
+.navbar a:hover {
+    color: #C4DFE6;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navbar .social-media {
+        margin-top: 10px;
+    }
 }
 
 /* MAIN CONTENT */
