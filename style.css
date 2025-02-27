@@ -1,50 +1,83 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Source+Sans+Pro:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Source+Sans+Pro:wght@300;400;700&display=swap');
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     color: #333; /* Dark gray for readability */
-    background-color: #F9F9F9; /* Soft white background */
+    background-color: #FCFCFC; /* Soft white background */
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* Headings */
+/* NAVBAR */
+.navbar {
+    overflow: hidden;
+    background-color: #003B46; /* Dark teal */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Align links left & social media right */
+    padding: 10px 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    padding: 12px 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #C4DFE6; /* Soft blue hover effect */
+}
+
+.navbar .social-media {
+    display: flex;
+    gap: 15px; /* Space between social media links */
+}
+
+/* MAIN CONTENT */
+.content {
+    max-width: 900px; /* Keeps text readable */
+    margin: 100px auto; /* Centers content */
+    padding: 20px;
+}
+
+/* HEADINGS */
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #004A99; /* Adjust this based on your chosen color scheme */
+    color: #003B46;
 }
 
-h1 {
-    font-size: 2.5rem; /* Large and bold */
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
 
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-/* Links */
+/* LINKS */
 a {
-    color: #F57C00; /* Accent color */
+    color: #003B46;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #D65A00; /* Darker shade for hover */
+    color: #66A5AD; /* Light teal */
     text-decoration: underline;
 }
 
-/* Buttons */
+/* BUTTONS */
 button, .btn {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    background-color: #F57C00;
+    background-color: #66A5AD;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -53,6 +86,15 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background-color: #D65A00; /* Darker shade on hover */
+    background-color: #003B46;
     cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #003B46;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
