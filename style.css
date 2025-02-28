@@ -164,6 +164,11 @@ html {
     transition: background-color 0.3s ease-in-out;
 }
 
+/* Fix Overlapping Navbar for Hero Section */
+.hero {
+    padding-top: 120px; /* Adjust this if still covered */
+}
+
 .hero {
     background-color: #003B46;
     color: white;
@@ -404,7 +409,7 @@ html {
 }
 
 /* Fix Overlapping Navbar */
-.content, .cv-section, .hero, .head {
+.content, .cv-section, .hero {
     padding-top: 100px; /* Moves content down so it's not covered by the navbar */
 }
 
