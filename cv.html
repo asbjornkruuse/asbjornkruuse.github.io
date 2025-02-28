@@ -107,48 +107,6 @@
 
 </section>
 
-<!-- Download PDF Button -->
-<section class="download-cv">
-    <button class="btn btn-download" id="downloadCV">📄 Download CV (PDF)</button>
-</section>
-
-<!-- Include jsPDF & html2canvas Libraries -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
-<script>
-    document.getElementById("downloadCV").addEventListener("click", function () {
-        const { jsPDF } = window.jspdf;
-        let doc = new jsPDF("p", "mm", "a4"); // Portrait mode, millimeters, A4 size
-        let cvSection = document.querySelector(".cv-section"); // Capture the entire CV
-
-        html2canvas(cvSection, {
-            scale: 2, // High resolution
-            windowWidth: document.body.scrollWidth, // Ensure full width is captured
-            scrollX: 0,
-            scrollY: 0
-        }).then(canvas => {
-            let imgData = canvas.toDataURL("image/png");
-            let imgWidth = 210; // A4 width in mm
-            let pageHeight = 297; // A4 height in mm
-            let imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-            let y = 10; // Initial margin
-
-            while (imgHeight > 0) {
-                doc.addImage(imgData, "PNG", 0, y, imgWidth, imgHeight);
-                imgHeight -= pageHeight; // Reduce height for next page
-                if (imgHeight > 0) {
-                    doc.addPage();
-                    y = 0; // Reset margin for new pages
-                }
-            }
-
-            doc.save("Asbjorn_Kruuse_CV.pdf");
-        });
-    });
-</script>
-
 <section class="competencies">
     <h2>Kompetencer</h2>
 
@@ -186,6 +144,55 @@
         </ul>
     </div>
 </section>
+
+<!-- Download PDF Button -->
+<section class="download-cv">
+    <button class="btn btn-download" id="downloadCV">📄 Download CV (PDF)</button>
+</section>
+
+<!-- Include jsPDF & html2canvas Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+    document.getElementById("downloadCV").addEventListener("click", function () {
+        const { jsPDF } = window.jspdf;
+        let doc = new jsPDF("p", "mm", "a4"); // Portrait mode, millimeters, A4 size
+        let cvSection = document.querySelector(".cv-section"); // Capture CV section
+        let competenciesSection = document.querySelector(".competencies"); // Capture Kompetencer
+
+        html2canvas(cvSection, {
+            scale: 2, // High resolution
+            windowWidth: document.body.scrollWidth,
+            scrollX: 0,
+            scrollY: 0
+        }).then(canvas1 => {
+            html2canvas(competenciesSection, {
+                scale: 2
+            }).then(canvas2 => {
+                let imgData1 = canvas1.toDataURL("image/png");
+                let imgData2 = canvas2.toDataURL("image/png");
+
+                let imgWidth = 210; // A4 width in mm
+                let pageHeight = 297; // A4 height in mm
+                let imgHeight1 = (canvas1.height * imgWidth) / canvas1.width;
+                let imgHeight2 = (canvas2.height * imgWidth) / canvas2.width;
+
+                let y = 10; // Initial Y position
+
+                // Page 1 - CV
+                doc.addImage(imgData1, "PNG", 0, y, imgWidth, imgHeight1);
+
+                // Add new page for Kompetencer
+                doc.addPage();
+                y = 10; // Reset Y position
+                doc.addImage(imgData2, "PNG", 0, y, imgWidth, imgHeight2);
+
+                doc.save("Asbjorn_Kruuse_CV.pdf");
+            });
+        });
+    });
+</script>
 
 
 </body>
