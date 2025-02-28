@@ -424,9 +424,11 @@ body {
 }
 
 /* Download CV Button */
+
 .download-cv {
     text-align: center;
     margin-top: 40px;
+    padding-bottom: 60px; /* Adds space at the bottom */
 }
 
 .btn-download {
