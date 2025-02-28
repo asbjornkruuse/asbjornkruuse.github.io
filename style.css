@@ -164,17 +164,23 @@ html {
     transition: background-color 0.3s ease-in-out;
 }
 
-.hero .btn:hover {
-    background-color: #005761;
+.hero {
+    background-color: #003B46;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
 }
 
-.hero .btn-secondary {
-    background-color: #C4DFE6;
-    color: #003B46;
+.hero h1 {
+    font-size: 3rem;
+    color: white; /* Sørger for at teksten forbliver synlig */
+    margin-bottom: 10px;
 }
 
-.hero .btn-secondary:hover {
-    background-color: #A4C5CF;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
 }
 
 /* About Section */
