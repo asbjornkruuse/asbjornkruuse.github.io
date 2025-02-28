@@ -165,8 +165,8 @@ html {
 }
 
 /* Fix Overlapping Navbar for Hero Section */
-.hero {
-    padding-top: 140px; /* Adjust this if still covered */
+.hero h1 {
+    padding-top: 120px; /* Adjust based on navbar height */
 }
 
 .hero {
@@ -276,6 +276,10 @@ html {
     margin: 60px auto;
     padding: 20px;
     text-align: center;
+}
+
+.cv-section h1 {
+    padding-top: 100px;
 }
 
 /* Timeline */
