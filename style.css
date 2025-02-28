@@ -366,3 +366,39 @@ html {
         margin-left: 15%;
     }
 }
+
+/* Kompetencer Section */
+.competencies {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #C4DFE6;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.competencies h2 {
+    font-size: 2rem;
+    color: #003B46;
+}
+
+.competency-category {
+    margin-top: 20px;
+}
+
+.competency-category h3 {
+    font-size: 1.3rem;
+    color: #005761;
+}
+
+.competency-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.competency-category li {
+    background: url('checkmark-icon.png') no-repeat left center;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
