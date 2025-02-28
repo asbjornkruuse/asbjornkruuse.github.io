@@ -404,7 +404,7 @@ html {
 }
 
 /* Fix Overlapping Navbar */
-.content, .cv-section, .hero {
+.content, .cv-section, .hero, .head {
     padding-top: 100px; /* Moves content down so it's not covered by the navbar */
 }
 
