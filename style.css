@@ -424,13 +424,14 @@ body {
 }
 
 /* Download CV Button */
-
+/*
 .download-cv {
     text-align: center;
     margin-top: 40px;
-    padding-bottom: 60px; /* Adds space at the bottom */
+    padding-bottom: 60px;
 }
-
+    */
+/*
 .btn-download {
     display: inline-block;
     padding: 12px 20px;
@@ -446,4 +447,4 @@ body {
 
 .btn-download:hover {
     background-color: #005761;
-}
+} */
