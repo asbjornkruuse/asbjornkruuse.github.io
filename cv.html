@@ -157,12 +157,12 @@
 <script>
     document.getElementById("downloadCV").addEventListener("click", function () {
         const { jsPDF } = window.jspdf;
-        let doc = new jsPDF("p", "mm", "a4"); // Portrait mode, millimeters, A4 size
+        let doc = new jsPDF("p", "mm", "a4"); // Portrait, mm, A4 size
         let cvSection = document.querySelector(".cv-section"); // Capture CV section
         let competenciesSection = document.querySelector(".competencies"); // Capture Kompetencer
 
         html2canvas(cvSection, {
-            scale: 2, // High resolution
+            scale: 2,
             windowWidth: document.body.scrollWidth,
             scrollX: 0,
             scrollY: 0
@@ -170,17 +170,24 @@
             html2canvas(competenciesSection, {
                 scale: 2
             }).then(canvas2 => {
-                let imgData1 = canvas1.toDataURL("image/png");
-                let imgData2 = canvas2.toDataURL("image/png");
-
                 let imgWidth = 210; // A4 width in mm
                 let pageHeight = 297; // A4 height in mm
-                let imgHeight1 = (canvas1.height * imgWidth) / canvas1.width;
-                let imgHeight2 = (canvas2.height * imgWidth) / canvas2.width;
-
                 let y = 10; // Initial Y position
 
-                // Page 1 - CV
+                let imgData1 = canvas1.toDataURL("image/png");
+                let imgHeight1 = (canvas1.height * imgWidth) / canvas1.width;
+
+                let imgData2 = canvas2.toDataURL("image/png");
+                let imgHeight2 = (canvas2.height * imgWidth) / canvas2.width;
+
+                // If timeline is taller than one page, adjust scaling
+                if (imgHeight1 > pageHeight - 20) {
+                    let ratio = (pageHeight - 20) / imgHeight1; // Scale down proportionally
+                    imgWidth *= ratio;
+                    imgHeight1 *= ratio;
+                }
+
+                // Add first section (CV & Timeline)
                 doc.addImage(imgData1, "PNG", 0, y, imgWidth, imgHeight1);
 
                 // Add new page for Kompetencer
@@ -193,6 +200,7 @@
         });
     });
 </script>
+
 
 
 </body>
