@@ -402,3 +402,13 @@ html {
     font-size: 1.1rem;
     margin: 5px 0;
 }
+
+/* Add top padding to all main sections */
+body {
+    padding-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Ensure headings are fully visible on mobile */
+h1, h2 {
+    margin-top: 20px;
+}
