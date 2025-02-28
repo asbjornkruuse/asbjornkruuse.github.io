@@ -106,6 +106,34 @@
     </div>
 
 </section>
+
+<!-- Download PDF Button -->
+<section class="download-cv">
+    <button class="btn btn-download" id="downloadCV">📄 Download CV (PDF)</button>
+</section>
+
+<!-- Include jsPDF & html2canvas Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+    document.getElementById("downloadCV").addEventListener("click", function () {
+        const { jsPDF } = window.jspdf;
+        let doc = new jsPDF("p", "mm", "a4"); // Portrait mode, millimeters, A4 size
+        
+        let cvSection = document.querySelector(".cv-section"); // Capture only the CV content
+
+        html2canvas(cvSection, { scale: 2 }).then(canvas => {
+            let imgData = canvas.toDataURL("image/png");
+            let imgWidth = 210; // A4 width in mm
+            let imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            doc.addImage(imgData, "PNG", 0, 10, imgWidth, imgHeight);
+            doc.save("Asbjorn_Kruuse_CV.pdf");
+        });
+    });
+</script>
+
 <section class="competencies">
     <h2>Kompetencer</h2>
 
