@@ -403,12 +403,13 @@ html {
     margin: 5px 0;
 }
 
-/* Add top padding to all main sections */
-body {
-    padding-top: 120px; /* Adjust based on navbar height */
+/* Fix Overlapping Navbar */
+.content, .cv-section, .hero {
+    padding-top: 100px; /* Moves content down so it's not covered by the navbar */
 }
 
-/* Ensure headings are fully visible on mobile */
-h1, h2 {
-    margin-top: 50px;
+/* Remove unwanted top margin on body */
+body {
+    margin: 0;
+    padding: 0;
 }
