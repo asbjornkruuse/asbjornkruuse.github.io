@@ -423,6 +423,25 @@ body {
     padding: 0;
 }
 
+/* Style for e-mail link */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Giver lidt afstand mellem elementerne */
+}
+
+.email-link {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.email-link:hover {
+    color: #C4DFE6; /* Lidt lysere blå ved hover */
+}
+
 /* Download CV Button */
 /*
 .download-cv {
