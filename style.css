@@ -134,3 +134,95 @@ button:hover, .btn:hover {
 html {
     overflow-y: scroll; /* Forces vertical scrollbar */
 }
+/* Hero Section */
+.hero {
+    background-color: #003B46;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    background-color: #66A5AD;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    background-color: #005761;
+}
+
+.hero .btn-secondary {
+    background-color: #C4DFE6;
+    color: #003B46;
+}
+
+.hero .btn-secondary:hover {
+    background-color: #A4C5CF;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #003B46;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about li {
+    background: url('checkmark-icon.png') no-repeat left center;
+    padding-left: 30px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #C4DFE6;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #003B46;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background-color: #003B46;
+    color: white;
+}
+
+.contact .btn:hover {
+    background-color: #005761;
+}
