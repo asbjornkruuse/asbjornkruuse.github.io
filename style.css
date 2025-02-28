@@ -405,10 +405,10 @@ html {
 
 /* Add top padding to all main sections */
 body {
-    padding-top: 80px; /* Adjust based on navbar height */
+    padding-top: 120px; /* Adjust based on navbar height */
 }
 
 /* Ensure headings are fully visible on mobile */
 h1, h2 {
-    margin-top: 20px;
+    margin-top: 50px;
 }
