@@ -165,3 +165,13 @@ body {
     color: #C4DFE6; /* Lidt lysere blå ved hover */
 }
 
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info span {
+    font-size: 16px;
+    color: white;
+}
