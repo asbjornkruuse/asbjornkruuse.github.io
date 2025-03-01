@@ -46,3 +46,11 @@
 .btn:hover {
     background-color: #005761;
 }
+
+/* Prevent long words from overflowing */
+.project-card h3, 
+.project-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto; /* Adds hyphens if needed */
+}
