@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="colorscheme.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/projekter.css">
-    </head>
-    <body>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekter - Asbjørn Martin Kruuse</title>
+    <link rel="stylesheet" href="css/colorscheme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/projekter.css">
+</head>
+<body>
 
-        <div class="navbar">
-            <a href="index.html">Start</a>
-            <a href="cv.html">CV</a>
-            <a href="projekter.html">Projekter</a>
-            <a href="certifikater.html">Certifikater</a>
-            <div class="contact-info">
-                <span>📞 Arbejde: +45 61 75 94 26</span>
-                <a href="mailto:asbjornmkruuse@gmail.com" class="email-link">📧 E-mail</a>
-                <!-- <span>📞 Privat: +45 87 65 43 21</span> -->
-                <a href="https://www.linkedin.com/in/asbj%C3%B8rn-martin-kruuse-282891175/" target="_blank">LinkedIn</a>
-            </div>
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="index.html">Start</a>
+    <a href="cv.html">CV</a>
+    <a href="projekter.html">Projekter</a>
+    <a href="certifikater.html">Certifikater</a>
+    <div class="contact-info">
+        <span>📞 Arbejde: +45 61 75 94 26</span>
+        <a href="mailto:asbjornmkruuse@gmail.com" class="email-link">📧 E-mail</a>
+        <a href="https://www.linkedin.com/in/asbj%C3%B8rn-martin-kruuse-282891175/" target="_blank">LinkedIn</a>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<section class="projects">
+    <h1>Projekter</h1>
+    <p>Her er nogle af de projekter, jeg har arbejdet på.</p>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Andel S4/HANA Projekt</h3>
+            <p>Konsolidering af to SAP systemer til et fælles system med S4/HANA-opgradering.</p>
+            <a href="#" class="btn">Læs mere</a>
         </div>
 
-<div class="content">
-    <h1 id="home">Projekter</h1>   
-    <h2>Udvalgte projekter</h2>
-    <h3>Andel S4/HANA Projekt</h3>
-    <p>Projektet omhandlede en konsolidering af de to SAP systemer fra hhv. Cerius og Radius til et fælles SAP system, som samtidig blev opgraderet til S4/HANA</p>
-    <h3>Udfastning af SAP 38 som opkrævningssystem (USO) hos Udvikling og Forenklingsstyrelsen</h3>
-    <p>Projektet er delt op i fire hovedleverencer (HL). Jeg kom ind på projektet i slutningen af HL1 hvor jeg hjalp med regressionstest.</p>
-    <p>I HL2 arbejdede jeg primært med renteberegningen af motorfordringer, både massekørsler men også enkeltpostrenteberegning.</p>
-    <p>Dette arbejde involverede opsætning af en masse testcases samt udførelsen af disse og fejlfinding af fejl der forekommer i forbindelse med renteberegningen.</p>
-    <h3>Patientallokeringsproblemet løst vha. Adaptive Large Neighborhood Search (Kandidatspeciale)</h3>
-    <p>Implementering af Adaptive Large Neighborhood Search. Lavet i programmeringssproget Julia.</p>
-</div>
+        <div class="project-card">
+            <h3>Udfastning af SAP 38</h3>
+            <p>Regressionstest og fejlfinding på motorfordringssystemet i forbindelse med opkrævning.</p>
+            <a href="#" class="btn">Læs mere</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Patientallokeringsproblemet</h3>
+            <p>Implementering af Adaptive Large Neighborhood Search i Julia-programmering.</p>
+            <a href="#" class="btn">Læs mere</a>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
-
-
-
