@@ -78,17 +78,6 @@
     background-color: #005761;
 }
 
-.contact-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.contact-info span {
-    font-size: 16px;
-    color: white;
-}
-
 .profile-image {
     width: 180px;
     height: 180px;
