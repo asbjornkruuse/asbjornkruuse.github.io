@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asbjornkruuse.github.io/sitemap.xml
