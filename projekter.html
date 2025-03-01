@@ -32,22 +32,52 @@
         <div class="project-card">
             <h3>Andel S4/HANA Projekt</h3>
             <p>Konsolidering af to SAP systemer til et fælles system med S4/HANA-opgradering.</p>
-            <a href="#" class="btn">Læs mere</a>
+            <div class="extra-content">
+                <p>Dette projekt involverede migrering af data, systemintegration og performance-optimering for at sikre en glidende overgang til det nye system.</p>
+            </div>
+            <button class="btn toggle-btn">Læs mere</button>
         </div>
-
+    
         <div class="project-card">
             <h3>Udfastning af SAP 38</h3>
             <p>Regressionstest og fejlfinding på motorfordringssystemet i forbindelse med opkrævning.</p>
-            <a href="#" class="btn">Læs mere</a>
+            <div class="extra-content">
+                <p>Jeg var ansvarlig for at opsætte og køre testcases samt dokumentere fundne fejl i systemet.</p>
+            </div>
+            <button class="btn toggle-btn">Læs mere</button>
         </div>
-
+    
         <div class="project-card">
             <h3>Patientallokeringsproblemet</h3>
             <p>Implementering af Adaptive Large Neighborhood Search i Julia-programmering.</p>
-            <a href="#" class="btn">Læs mere</a>
+            <div class="extra-content">
+                <p>Udviklet en algoritme til effektiv patientallokering, som blev testet på simulerede scenarier.</p>
+            </div>
+            <button class="btn toggle-btn">Læs mere</button>
         </div>
     </div>
+    
 </section>
+
+<script>
+    document.querySelectorAll(".toggle-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let projectCard = this.parentElement;
+            let extraContent = projectCard.querySelector(".extra-content");
+
+            if (extraContent.style.display === "none" || extraContent.style.display === "") {
+                extraContent.style.display = "block";
+                projectCard.classList.add("expanded");
+                this.textContent = "Læs mindre"; // Change button text
+            } else {
+                extraContent.style.display = "none";
+                projectCard.classList.remove("expanded");
+                this.textContent = "Læs mere";
+            }
+        });
+    });
+</script>
+
 
 </body>
 </html>

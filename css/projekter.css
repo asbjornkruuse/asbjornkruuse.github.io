@@ -54,3 +54,15 @@
     overflow-wrap: break-word;
     hyphens: auto; /* Adds hyphens if needed */
 }
+
+/* Hide extra content by default */
+.extra-content {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Style for expanded project box */
+.project-card.expanded {
+    background-color: #B0D3DA; /* Slightly different color when expanded */
+    transition: all 0.3s ease-in-out;
+}
