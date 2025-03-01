@@ -46,3 +46,7 @@
 .btn:hover {
     background-color: #005761;
 }
+
+.certifications h1 {
+    padding-top: 100px; /* Adjust based on navbar height */
+}
