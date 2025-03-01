@@ -1,0 +1,167 @@
+/* CV Section */
+.cv-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.cv-section h1 {
+    padding-top: 100px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Vertical Line */
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 10px; /* Moves the line down */
+    left: 50%;
+    width: 3px; /* Makes it thinner */
+    height: calc(100% - 20px);
+    background: #66A5AD;
+    transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+/* Icon Box */
+.timeline-icon {
+    width: 40px; /* Smaller icon */
+    height: 40px;
+    background: #003B46;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline Content Box */
+.timeline-content {
+    width: 45%;
+    padding: 15px; /* Smaller padding */
+    background: #C4DFE6;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* Headings */
+.timeline-content h3 {
+    font-size: 1.2rem;
+    color: #003B46;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    color: #005761;
+    margin-bottom: 5px;
+}
+
+/* Skills List */
+.timeline-content p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .timeline:before {
+        left: 10%;
+    }
+
+    .timeline-icon {
+        left: 10%;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .timeline-content {
+        width: 80%;
+        margin-left: 15%;
+    }
+}
+
+/* Kompetencer Section */
+.competencies {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #C4DFE6;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.competencies h2 {
+    font-size: 2rem;
+    color: #003B46;
+}
+
+.competency-category {
+    margin-top: 20px;
+}
+
+.competency-category h3 {
+    font-size: 1.3rem;
+    color: #005761;
+}
+
+.competency-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.competency-category li {
+    background: url('checkmark-icon.png') no-repeat left center;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* Download CV Button */
+/*
+.download-cv {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 60px;
+}
+    */
+/*
+.btn-download {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #003B46;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-download:hover {
+    background-color: #005761;
+} */
