@@ -212,7 +212,36 @@
 
 /* Small screens: stack nicely */
 @media (max-width: 640px) {
-  .competency-category { flex: 1 1 100%; }
+  .competencies { gap: 16px; padding: 16px; }
+  .competency-category { padding: 14px 16px; }
+}
+
+.competency-category {
+  display: flex;
+  flex-direction: column;
+  height: 100%;          /* cards stretch to same height in each row */
+}
+.competency-category ul { margin-top: 6px; }
+
+.competency-category li {
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+.competency-category li::before {
+  content: "✓";
+  color: #0e5259;        /* matches your theme */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.competency-category {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.competency-category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
 }
 /* .competencies {
     max-width: 800px;
