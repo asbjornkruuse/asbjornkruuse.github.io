@@ -105,7 +105,68 @@
 }
 
 /* Kompetencer Section */
+/* Make the competencies section a responsive grid */
 .competencies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1000px;            /* tweak to your taste */
+  margin: 50px auto;
+  padding: 24px;
+  background: #C4DFE6;
+  border-radius: 12px;
+}
+
+/* Let the section title span all columns */
+.competencies > h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+/* Each category becomes a “card” */
+.competency-category {
+  background: rgba(255,255,255,0.35);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+/* Headings and lists inside each card */
+.competency-category h3 {
+  margin: 0 0 10px;
+  color: #005761;
+  font-size: 1.15rem;
+}
+
+.competency-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.competency-category li {
+  position: relative;
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+/* Tidy checkmark bullets */
+.competency-category li::before {
+  content: "✓";
+  color: #003B46;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Small screens: keep it comfy */
+@media (max-width: 640px) {
+  .competencies {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+/* .competencies {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
@@ -138,7 +199,9 @@
     padding-left: 25px;
     font-size: 1.1rem;
     margin: 5px 0;
-}
+} */
+
+
 
 /* Download CV Button */
 /*
