@@ -166,6 +166,54 @@
     gap: 16px;
   }
 }
+
+.competencies {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 24px;
+  background: #C4DFE6;
+  border-radius: 12px;
+
+  /* layout */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Make the H2 take a whole row */
+.competencies > h2 {
+  flex: 1 1 100%;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+/* Each category becomes a “card”/column */
+.competency-category {
+  flex: 1 1 260px;        /* min width of each column */
+  min-width: 260px;       /* guard against shrinking too small */
+  background: rgba(255,255,255,0.35);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+/* Tidy heading with emoji */
+.competency-category h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: #005761;
+  font-size: 1.15rem;
+}
+
+/* Clean list */
+.competency-category ul { margin: 0; padding: 0; list-style: none; }
+.competency-category li { margin: 6px 0; }
+
+/* Small screens: stack nicely */
+@media (max-width: 640px) {
+  .competency-category { flex: 1 1 100%; }
+}
 /* .competencies {
     max-width: 800px;
     margin: 50px auto;
