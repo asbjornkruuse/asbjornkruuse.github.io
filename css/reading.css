@@ -1,0 +1,79 @@
+/* Hero Section */
+.hero {
+    background-color: #003B46;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    background-color: #66A5AD;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Fix Overlapping Navbar for Hero Section */
+.hero h1 {
+    padding-top: 120px; /* Adjust based on navbar height */
+}
+
+.hero {
+    background-color: #003B46;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white; /* Sørger for at teksten forbliver synlig */
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #C4DFE6;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #003B46;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background-color: #003B46;
+    color: white;
+}
+
+.contact .btn:hover {
+    background-color: #005761;
+}
