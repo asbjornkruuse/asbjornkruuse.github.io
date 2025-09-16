@@ -64,6 +64,27 @@ body {
     white-space: nowrap;
 }
 
+/* Right side of the navbar: phone + email + LinkedIn */
+.navbar .contact-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;          /* adjust to taste */
+  white-space: nowrap;/* prevent wrapping that squeezes spacing */
+}
+
+/* Left group: main menu */
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 56px;          /* even spacing between menu items */
+  flex-wrap: nowrap;  /* keep in one line on desktop */
+}
+
+@media (max-width: 900px) {
+  .navbar .menu { gap: 20px; flex-wrap: wrap; }
+  .navbar .contact-info { gap: 12px; flex-wrap: wrap; }
+}
+
 /* HOVER EFFECTS */
 .navbar a:hover {
     color: #C4DFE6;
