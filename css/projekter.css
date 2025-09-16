@@ -104,3 +104,26 @@
   padding-left: 18px;
 }
 .bullets li { margin: 6px 0; }
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E6F0F2;
+  color: #003B46;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.badge svg {
+  flex-shrink: 0;
+}
