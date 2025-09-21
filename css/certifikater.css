@@ -99,3 +99,22 @@
 
 /* Slight bottom breathing room for the page */
 .certifications { padding-bottom: 40px; }
+
+/* Work certificates */
+.cert-card.work {
+  background: #B3DEE2; /* professional teal/blue tint */
+}
+
+/* Private certificates */
+.cert-card.private {
+  background: #DCEAF5; /* softer light blue/gray tint */
+}
+
+.cert-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
