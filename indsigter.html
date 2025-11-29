@@ -95,3 +95,24 @@
         <button class="btn toggle-btn">Læs mere</button>
     </div>
 </section>
+
+<script>
+    document.querySelectorAll(".toggle-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let projectCard = this.parentElement;
+            let extraContent = projectCard.querySelector(".extra-content");
+
+            if (extraContent.style.display === "none" || extraContent.style.display === "") {
+                extraContent.style.display = "block";
+                projectCard.classList.add("expanded");
+                this.textContent = "Læs mindre"; // Change button text
+            } else {
+                extraContent.style.display = "none";
+                projectCard.classList.remove("expanded");
+                this.textContent = "Læs mere";
+            }
+        });
+    });
+</script>
+</body>
+</html>
