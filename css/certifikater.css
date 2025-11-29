@@ -47,9 +47,11 @@
     background-color: #005761;
 }
 
-.certifications h1 {
+.certifications h1 { padding-top: 0; }
+.certifications { padding-top: 40px; }
+/* .certifications h1 {
     padding-top: 190px; /* Adjust based on navbar height */
-}
+/* } 
 
 /* Titles */
 .certifications h1 { text-align:center; margin-bottom: 10px; }
