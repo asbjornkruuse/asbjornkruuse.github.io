@@ -187,3 +187,14 @@ body {
     font-size: 16px;
     color: white;
 }
+
+:root { --nav-h: 72px; }          /* desktop navbar height */
+@media (max-width: 900px) {
+  :root { --nav-h: 110px; }        /* taller on mobile if needed */
+}
+
+/* Offset all pages from the fixed navbar */
+body { padding-top: var(--nav-h); }
+
+/* If you use in-page anchors (#section), headings won't hide */
+h1, h2, h3, section { scroll-margin-top: var(--nav-h); }
