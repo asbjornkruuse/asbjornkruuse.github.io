@@ -77,3 +77,84 @@
 .contact .btn:hover {
     background-color: #005761;
 }
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #003B46;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about li {
+    background: url('checkmark-icon.png') no-repeat left center;
+    padding-left: 30px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Project Cards */
+.project-card {
+    background: #C4DFE6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Project Titles */
+.project-card h3 {
+    font-size: 1.3rem;
+    color: #003B46;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #003B46;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #005761;
+}
+
+/* Prevent long words from overflowing */
+.project-card h3, 
+.project-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto; /* Adds hyphens if needed */
+}
+
+/* Hide extra content by default */
+.extra-content {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Style for expanded project box */
+.project-card.expanded {
+    background-color: #B0D3DA; /* Slightly different color when expanded */
+    transition: all 0.3s ease-in-out;
+}
+
+.projects h1 {
+    padding-top: 200px; /* Adjust based on navbar height */
+}
