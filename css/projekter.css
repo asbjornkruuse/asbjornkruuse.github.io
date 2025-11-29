@@ -67,7 +67,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-.projects > h1:first-of-type { padding-top: 120px; }   /* adjust value to your nav height */
+.projects > h1:first-of-type { padding-top: 40px; }   /* adjust value to your nav height */
 
 /* .projects h1 {
     padding-top: 200px; /* Adjust based on navbar height */
