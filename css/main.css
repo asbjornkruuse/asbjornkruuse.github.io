@@ -256,3 +256,61 @@ h1, h2, h3, section { scroll-margin-top: var(--nav-h); }
 .dropdown:hover .dropbtn {
   text-decoration: underline;
 }
+
+/* Left group: keep even spacing between *items* (links + dropdown) */
+.navbar .menu{
+  display: flex;
+  align-items: center;
+  gap: 56px;              /* <- controls the spacing between items */
+  flex-wrap: nowrap;
+}
+
+/* Make the dropdown act like a single menu item */
+.navbar .menu .dropdown{
+  display: inline-flex;   /* sits like a link */
+  align-items: center;
+}
+
+/* Keep the drop button styled like other nav links */
+.navbar .menu .dropbtn{
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;             /* match your other links (they had no padding) */
+}
+
+/* Optional: underline only on hover to signal it's still a main link */
+.navbar .menu .dropdown:hover .dropbtn{
+  text-decoration: underline;
+}
+
+/* Left group: keep even spacing between *items* (links + dropdown) */
+.navbar .menu{
+  display: flex;
+  align-items: center;
+  gap: 56px;              /* <- controls the spacing between items */
+  flex-wrap: nowrap;
+}
+
+/* Make the dropdown act like a single menu item */
+.navbar .menu .dropdown{
+  display: inline-flex;   /* sits like a link */
+  align-items: center;
+}
+
+/* Keep the drop button styled like other nav links */
+.navbar .menu .dropbtn{
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;             /* match your other links (they had no padding) */
+}
+
+/* Optional: underline only on hover to signal it's still a main link */
+.navbar .menu .dropdown:hover .dropbtn{
+  text-decoration: underline;
+}
