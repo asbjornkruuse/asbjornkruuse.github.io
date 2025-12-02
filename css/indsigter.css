@@ -231,3 +231,10 @@
 .badge svg {
   flex-shrink: 0;
 }
+
+.button-group {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 10px; /* consistent spacing */
+  align-items: center; /* optional, center in card */
+}
