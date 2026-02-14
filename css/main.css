@@ -35,12 +35,15 @@
 }
 .navbar a:hover{ color:#C4DFE6; }
 
-/* Right side contact row */
+/* Right side contact row — sits at the far right without shrinking the menu */
 .contact-info{
+  position: absolute;
+  right: 28px;
   display:flex;
   align-items:center;
   gap: 18px;
   white-space: nowrap;
+  font-size: 14px;
 }
 .contact-info span{ color:#fff; font-size:16px; }
 .email-link{ color:#fff; font-weight:700; }
