@@ -3,17 +3,20 @@
     background-color: #003B46;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
 }
 
 .hero h1 {
     font-size: 3rem;
+    color: white;
     margin-bottom: 10px;
+    padding-top: 120px; /* Adjust based on navbar height */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: white;
 }
 
 .hero .btn {
@@ -26,30 +29,6 @@
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
-}
-
-/* Fix Overlapping Navbar for Hero Section */
-.hero h1 {
-    padding-top: 120px; /* Adjust based on navbar height */
-}
-
-.hero {
-    background-color: #003B46;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: white; /* Sørger for at teksten forbliver synlig */
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: white;
 }
 
 /* Contact Section */
@@ -81,12 +60,13 @@
 .profile-image {
     width: 180px;
     height: 180px;
-    border-radius: 50%; /* Gør billedet rundt */
-    border: 4px solid white; /* Lægger en flot hvid kant omkring */
+    border-radius: 50%;
+    border: 4px solid white;
     display: block;
-    margin: 20px auto; /* Centrerer billedet */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Tilføjer en let skygge */
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -114,11 +94,3 @@ html {
     margin: 10px 0;
     font-size: 1.1rem;
 }
-
-/* @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.hero h1 {
-    animation: fadeIn 1.5s ease-in-out;
-} */

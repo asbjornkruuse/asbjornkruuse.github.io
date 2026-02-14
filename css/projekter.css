@@ -48,11 +48,11 @@
 }
 
 /* Prevent long words from overflowing */
-.project-card h3, 
+.project-card h3,
 .project-card p {
     word-wrap: break-word;
     overflow-wrap: break-word;
-    hyphens: auto; /* Adds hyphens if needed */
+    hyphens: auto;
 }
 
 /* Hide extra content by default */
@@ -63,69 +63,43 @@
 
 /* Style for expanded project box */
 .project-card.expanded {
-    background-color: #B0D3DA; /* Slightly different color when expanded */
+    background-color: #B0D3DA;
     transition: all 0.3s ease-in-out;
 }
 
-/* .projects > h1:first-of-type { padding-top: 40px; }   adjust value to your nav height */
-
-/* .projects h1 {
-    padding-top: 200px; /* Adjust based on navbar height */
-/* } 
-
 /* Meta row under the title */
 .project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 6px 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
 }
 
 /* Small chips/badges */
 .badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #003B46;
-  background: rgba(0, 59, 70, 0.10);
-  border: 1px solid rgba(0, 59, 70, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #E6F0F2;
+    color: #003B46;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
 /* Optional color accents per type */
-.badge.client  { background: rgba(0,59,70,0.10); }
-.badge.period  { background: rgba(0,87,97,0.10); }
-.badge.area    { background: rgba(196,223,230,0.35); }
+.badge.client { background: rgba(0,59,70,0.10); }
+.badge.period { background: rgba(0,87,97,0.10); }
+.badge.area   { background: rgba(196,223,230,0.35); }
+
+.badge svg {
+    flex-shrink: 0;
+}
 
 /* Nicer bullets in expanded section */
 .bullets {
-  margin: 8px 0 0;
-  padding-left: 18px;
+    margin: 8px 0 0;
+    padding-left: 18px;
 }
 .bullets li { margin: 6px 0; }
-
-.project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: #E6F0F2;
-  color: #003B46;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-.badge svg {
-  flex-shrink: 0;
-}
