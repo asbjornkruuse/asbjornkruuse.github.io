@@ -17,9 +17,8 @@
 .navbar .menu{
   display: flex;
   align-items: center;
-  gap: 56px;              /* controls spacing between items */
   flex: 1;                /* take available space */
-  justify-content: center;/* center items across the width */
+  justify-content: space-evenly; /* spread items like the other pages */
   flex-wrap: nowrap;      /* prevent line breaks */
 }
 
