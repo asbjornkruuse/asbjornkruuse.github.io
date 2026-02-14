@@ -10,3 +10,307 @@
     <h3>Patientallokeringsproblemet løst vha. Adaptive Large Neighborhood Search (Kandidatspeciale)</h3>
     <p>Implementering af Adaptive Large Neighborhood Search. Lavet i programmeringssproget Julia.</p>
 </div>
+
+main.css legacy:
+/* NAVBAR FIX */
+/* .navbar {
+    overflow: hidden; */
+    /* background-color: #003B46; Dark teal */
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex; */
+    /* justify-content: space-between; Align menu left, social media right */
+    /* align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+} */
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: #003B46;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  box-sizing: border-box;
+}
+
+/* NAVBAR MENU */
+.navbar .menu {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+    flex-wrap: wrap; /* Prevents text from getting cut */
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 16px; /* Slightly smaller text to fit better */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents menu items from breaking into multiple lines */
+}
+
+/* NAVBAR SOCIAL LINKS */
+.navbar .social-media {
+    display: flex;
+    gap: 10px; /* Adjust spacing */
+    white-space: nowrap;
+}
+
+/* HOVER EFFECTS */
+.navbar a:hover {
+    color: #C4DFE6;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navbar .social-media {
+        margin-top: 10px;
+    }
+}
+
+/* MAIN CONTENT */
+.content {
+    max-width: 900px; /* Keeps text readable */
+    margin: 100px auto; /* Centers content */
+    padding: 20px;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #003B46;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* LINKS */
+a {
+    color: #003B46;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #66A5AD; /* Light teal */
+    text-decoration: underline;
+}
+
+/* BUTTONS */
+button, .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: #66A5AD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover, .btn:hover {
+    background-color: #003B46;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #003B46;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+html {
+    overflow-y: scroll; /* Forces vertical scrollbar */
+}
+
+/* Fix Overlapping Navbar */
+.content, .cv-section {
+    padding-top: 100px; /* Moves content down so it's not covered by the navbar */
+}
+
+/* Remove unwanted top margin on body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for e-mail link */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Giver lidt afstand mellem elementerne */
+}
+
+.email-link {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.email-link:hover {
+    color: #C4DFE6; /* Lidt lysere blå ved hover */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info span {
+    font-size: 16px;
+    color: white;
+}
+
+:root { --nav-h: 72px; }          /* desktop navbar height */
+@media (max-width: 900px) {
+  :root { --nav-h: 110px; }        /* taller on mobile if needed */
+}
+
+/* Offset all pages from the fixed navbar */
+body { padding-top: var(--nav-h); }
+
+/* If you use in-page anchors (#section), headings won't hide */
+h1, h2, h3, section { scroll-margin-top: var(--nav-h); }
+
+/* --- DROPDOWN MENU --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #004b52; /* matches navbar */
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 999;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  transition: background 0.2s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  background-color: #006f75; /* lighter hover color */
+}
+
+/* --- Hover trigger --- */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: make dropdown fade in softly */
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Optional visual cue: underline only “Indsigter” when hovered */
+.dropdown:hover .dropbtn {
+  text-decoration: underline;
+}
+
+/* Left group: keep even spacing between *items* (links + dropdown) */
+.navbar .menu{
+  display: flex;
+  align-items: center;
+  gap: 56px;              /* <- controls the spacing between items */
+  flex-wrap: nowrap;
+}
+
+/* Make the dropdown act like a single menu item */
+.navbar .menu .dropdown{
+  display: inline-flex;   /* sits like a link */
+  align-items: center;
+}
+
+/* Keep the drop button styled like other nav links */
+.navbar .menu .dropbtn{
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;             /* match your other links (they had no padding) */
+}
+
+/* Optional: underline only on hover to signal it's still a main link */
+.navbar .menu .dropdown:hover .dropbtn{
+  text-decoration: underline;
+}
+
+/* Left group: keep even spacing between *items* (links + dropdown) */
+.navbar .menu{
+  display: flex;
+  align-items: center;
+  gap: 56px;              /* <- controls the spacing between items */
+  flex-wrap: nowrap;
+}
+
+/* Make the dropdown act like a single menu item */
+.navbar .menu .dropdown{
+  display: inline-flex;   /* sits like a link */
+  align-items: center;
+}
+
+/* Keep the drop button styled like other nav links */
+.navbar .menu .dropbtn{
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;             /* match your other links (they had no padding) */
+}
+
+/* Optional: underline only on hover to signal it's still a main link */
+.navbar .menu .dropdown:hover .dropbtn{
+  text-decoration: underline;
+}
