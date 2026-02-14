@@ -2,8 +2,14 @@
 .certifications {
     max-width: 800px;
     margin: 60px auto;
-    padding: 20px;
+    padding: 20px 20px 40px;
     text-align: center;
+}
+
+.certifications h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 0;
 }
 
 /* Grid layout for certificates */
@@ -21,6 +27,12 @@
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 /* Certification Title */
@@ -30,93 +42,48 @@
     margin-bottom: 10px;
 }
 
-/* Button for viewing certificates */
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #003B46;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #005761;
-}
-
-.certifications h1 { padding-top: 0; }
-.certifications { padding-top: 40px; }
-/* .certifications h1 {
-    padding-top: 190px; /* Adjust based on navbar height */
-/* } 
-
-/* Titles */
-.certifications h1 { text-align:center; margin-bottom: 10px; }
+/* Section titles */
 .cert-section-title {
-  margin: 28px auto 8px;
-  max-width: 800px;
-  text-align: left;
-  color: #003B46;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: .2px;
-  border-left: 4px solid #005761;
-  padding-left: 10px;
-  opacity: .95;
+    margin: 28px auto 8px;
+    max-width: 800px;
+    text-align: left;
+    color: #003B46;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .2px;
+    border-left: 4px solid #005761;
+    padding-left: 10px;
+    opacity: .95;
 }
 
 /* Badge row under each certificate title */
 .cert-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-  margin: 6px 0 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 6px 0 14px;
 }
 
 /* Keyword badges */
 .c-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  font-size: .85rem;
-  font-weight: 600;
-  color: #003B46;
-  background: rgba(0,59,70,.10);
-  border: 1px solid rgba(0,59,70,.15);
-  border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: .85rem;
+    font-weight: 600;
+    color: #003B46;
+    background: rgba(0,59,70,.10);
+    border: 1px solid rgba(0,59,70,.15);
+    border-radius: 999px;
 }
-
-/* Optional: subtle card hover */
-.cert-card {
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.cert-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,.12);
-}
-
-/* Slight bottom breathing room for the page */
-.certifications { padding-bottom: 40px; }
 
 /* Work certificates */
 .cert-card.work {
-  background: #B3DEE2; /* professional teal/blue tint */
+    background: #B3DEE2;
 }
 
 /* Private certificates */
 .cert-card.private {
-  background: #DCEAF5; /* softer light blue/gray tint */
-}
-
-.cert-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    background: #DCEAF5;
 }
