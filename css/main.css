@@ -18,8 +18,9 @@
   display: flex;
   align-items: center;
   flex: 1;                /* take available space */
-  justify-content: space-evenly; /* spread items like the other pages */
+  justify-content: space-between; /* spread items across the full width */
   flex-wrap: nowrap;      /* prevent line breaks */
+  padding: 0 28px;        /* breathing room at edges */
 }
 
 /* All nav links (including dropdown trigger) */
