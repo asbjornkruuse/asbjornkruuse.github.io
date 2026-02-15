@@ -156,3 +156,32 @@ body {
   .navbar .menu{ gap:20px; flex-wrap:wrap; justify-content:center; }
   .contact-info{ margin-top:8px; gap:12px; }
 }
+
+/* Mobile specific improvements */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .about {
+        padding: 40px 15px;
+    }
+    
+    .about-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact {
+        padding: 60px 20px;
+    }
+}
