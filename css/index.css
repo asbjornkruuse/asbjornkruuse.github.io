@@ -389,6 +389,32 @@
     .trust-indicators {
         justify-content: center;
     }
+        .contact {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    .contact .btn {
+        width: 90%;  /* 90% af container bredden */
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
 }
 
 
+
+@media (max-width: 768px) {
+
+}
