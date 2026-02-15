@@ -105,7 +105,7 @@
 .bullets li { margin: 6px 0; }
 
 @media (max-width: 768px) {
-    .hero {
+    .projects {
         padding: 320px 20px 60px;  /* Mindre end 320px men nok til billedet */
         min-height: auto;  /* Lad indholdet bestemme højden */
     }
