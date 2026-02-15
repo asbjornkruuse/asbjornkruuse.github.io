@@ -142,26 +142,38 @@
     box-shadow: 0 6px 14px rgba(0,0,0,.12);
 } */ 
 
+/* Competencies Section - Clean Grid Layout */
 .competencies {
   max-width: 1000px;
   margin: 50px auto;
-  padding: 30px 24px;  /* Øg padding fra 24px til 30px */
+  padding: 40px 30px;
   background: #C4DFE6;
   border-radius: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  overflow: visible;  /* Sørg for at hover effekter kan ses */
 }
 
+/* Title spans full width */
+.competencies > h2 {
+  text-align: center;
+  margin: 0 0 35px 0;
+  color: #003B46;
+  font-size: 2rem;
+}
+
+/* Grid container for the three columns */
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Individual category cards */
 .competency-category {
-  flex: 1 1 260px;
-  min-width: 260px;
   background: rgba(255,255,255,0.35);
   border-radius: 10px;
-  padding: 16px 18px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
   transition: transform .15s ease, box-shadow .15s ease;
-  margin: 4px;  /* Tilføj lidt margin så hover ikke går over kanten */
 }
 
 .competency-category:hover {
@@ -169,14 +181,61 @@
   box-shadow: 0 6px 14px rgba(0,0,0,.12);
 }
 
-/* Headings inside each card */
+/* Category headings with emoji */
 .competency-category h3 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0 0 10px;
-    color: #005761;
-    font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 15px;
+  color: #005761;
+  font-size: 1.15rem;
+}
+
+/* Lists inside categories */
+.competency-category ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.competency-category li {
+  margin: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Checkmark bullets */
+.competency-category li::before {
+  content: "✓";
+  color: #0e5259;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* Responsive - stack on smaller screens */
+@media (max-width: 900px) {
+  .competencies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .competencies {
+    padding: 24px 16px;
+  }
+  
+  .competencies-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .competency-category {
+    padding: 16px 14px;
+  }
 }
 
 /* Clean list */
