@@ -395,13 +395,6 @@
         width: 100%;
         padding: 0 20px;
     }
-
-    .contact .btn {
-        width: 100%;
-        max-width: 350px;
-        justify-content: center;
-        text-align: center;
-    }
 }
 
 
