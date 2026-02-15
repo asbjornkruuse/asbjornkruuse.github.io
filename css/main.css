@@ -8,19 +8,19 @@
   background: #003B46;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 14px 28px;
   box-sizing: border-box;
 }
 
-/* Left menu row */
+/* Left menu row (used on indsigter.html) */
 .navbar .menu{
   display: flex;
   align-items: center;
+  gap: 56px;              /* controls spacing between items */
   flex: 1;                /* take available space */
-  justify-content: space-between; /* spread items across the full width */
+  justify-content: center;/* center items across the width */
   flex-wrap: nowrap;      /* prevent line breaks */
-  padding: 0 28px;        /* breathing room at edges */
 }
 
 /* All nav links (including dropdown trigger) */
@@ -30,21 +30,19 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #fff;
-  padding: 10px 0;        /* vertical padding only; spacing comes from gap */
+  margin: 0 15px;         /* spacing between nav links */
+  padding: 10px 0;
   white-space: nowrap;
   transition: color .2s ease-in-out;
 }
 .navbar a:hover{ color:#C4DFE6; }
 
-/* Right side contact row — sits at the far right without shrinking the menu */
+/* Right side contact row */
 .contact-info{
-  position: absolute;
-  right: 28px;
   display:flex;
   align-items:center;
   gap: 18px;
   white-space: nowrap;
-  font-size: 14px;
 }
 .contact-info span{ color:#fff; font-size:16px; }
 .email-link{ color:#fff; font-weight:700; }
@@ -74,6 +72,7 @@
   padding:10px 16px;
   font-size:15px;
   text-decoration:none;
+  margin: 0;              /* override navbar a margin for dropdown items */
   transition: background .2s ease;
 }
 .dropdown-content a:hover{ background:#006f75; }
