@@ -1,7 +1,7 @@
 .hero {
     background-color: #003B46;
     color: white;
-    padding: 320px 20px 80px;
+    padding: 140px 20px 80px;
     min-height: 500px;
 }
 
@@ -226,6 +226,51 @@
         width: 100%;
         max-width: 300px;
         justify-content: center;
+    }
+}
+
+/* Mobile - mere padding for at få billedet med */
+@media (max-width: 768px) {
+    .hero {
+        padding: 180px 20px 60px;  /* Mindre end 320px men nok til billedet */
+        min-height: auto;  /* Lad indholdet bestemme højden */
+    }
+    
+    .profile-image {
+        width: 200px;  /* Mindre billede på mobil */
+        height: 200px;
+    }
+}   
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator span {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Skjul på mobil hvis ikke nødvendigt */
+@media (max-width: 768px) {
+    .scroll-indicator {
+        display: none;
     }
 }
 
