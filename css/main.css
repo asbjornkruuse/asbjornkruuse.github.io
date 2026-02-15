@@ -171,7 +171,8 @@ body {
 /* Mobile specific improvements */
 @media (max-width: 768px) {
     .hero {
-        padding: 80px 20px 60px;
+        padding: 320px 20px 60px;  /* Mindre end 320px men nok til billedet */
+        min-height: auto;  /* Lad indholdet bestemme højden */
     }
     
     .hero h1 {

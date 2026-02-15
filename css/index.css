@@ -161,6 +161,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
+    align-items: center;
 }
 
 .contact .btn {
@@ -387,6 +388,19 @@
     
     .trust-indicators {
         justify-content: center;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contact .btn {
+        width: 100%;
+        max-width: 350px;
+        justify-content: center;
+        text-align: center;
     }
 }
 
