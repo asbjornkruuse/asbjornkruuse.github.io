@@ -3,6 +3,7 @@
     color: white;
     padding: 140px 20px 80px;
     min-height: 500px;
+    position: relative;
 }
 
 .hero-content {
@@ -241,6 +242,13 @@
         height: 200px;
     }
 }   
+
+/* Skjul på mobil */
+@media (max-width: 768px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
 
 .scroll-indicator {
     position: absolute;
