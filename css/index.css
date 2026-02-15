@@ -36,6 +36,7 @@
 .hero h1 {
     font-size: 3.2rem;
     margin-bottom: 10px;
+    color: white;
     padding-top: 0;
     line-height: 1.2;
 }
@@ -45,6 +46,12 @@
     color: #C4DFE6;
     margin-bottom: 20px;
     font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;  /* Sørg for at dette også er her */
 }
 
 .hero-description {
@@ -75,6 +82,54 @@
     gap: 5px;
 }
 
+/* Fix for hero text visibility */
+.hero h1,
+.hero p,
+.hero .hero-subtitle,
+.hero .hero-description {
+    color: white !important;
+}
+
+/* Fix for about section */
+.about {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #FCFCFC;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about h3 {
+    color: #005761;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about li {
+    padding-left: 25px;
+    margin: 10px 0;
+    position: relative;
+    line-height: 1.6;
+}
+
+.about li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #66A5AD;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .hero-content {
@@ -89,6 +144,7 @@
     
     .hero h1 {
         font-size: 2.2rem;
+         color: white;
     }
     
     .profile-image {
