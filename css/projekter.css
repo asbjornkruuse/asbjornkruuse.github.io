@@ -106,7 +106,7 @@
 
 @media (max-width: 768px) {
     .projects {
-        padding: 320px 20px 60px;  /* Mindre end 320px men nok til billedet */
+        padding: 280px 20px 60px;  /* Mindre end 320px men nok til billedet */
         min-height: auto;  /* Lad indholdet bestemme højden */
     }
 }   

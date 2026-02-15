@@ -275,7 +275,7 @@
 /* Mobile - mere padding for at få billedet med */
 @media (max-width: 768px) {
     .cv-section {
-        padding: 320px 20px 60px;  /* Mindre end 320px men nok til billedet */
+        padding: 180px 20px 60px;  /* Mindre end 320px men nok til billedet */
         min-height: auto;  /* Lad indholdet bestemme højden */
     }
 }   
